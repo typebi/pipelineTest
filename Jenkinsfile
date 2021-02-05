@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Progress') {
             steps {
-                git branch: 'main', url: 'https://github.com/typebi/JavaApp/'
+                git branch: 'main', url: 'https://github.com/typebi/pipelineTest/'
             }
         }
         stage('Test Slack') {
