@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'gradle clean build'
+                sh './gradlew clean build'
                 slackSend (channel: '#testchannel', color: '#008000', message: "BUILD SUCCESS")
             }
         }
