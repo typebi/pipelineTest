@@ -23,7 +23,7 @@ test {
 }
 jar{
     manifest{
-        attributes  'Title': 'My Application', 'Version': version, 'Main-Class': mainClassName
+        attributes  'Title': 'My Application', 'Version': version, 'Main-Class': MyApp
     }
     archiveName 'Practice.jar'
 }
