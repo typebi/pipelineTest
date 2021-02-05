@@ -22,5 +22,12 @@ test {
     useJUnitPlatform()
 }
 jar{
+    manifest{
+        attributes 'Title': 'My Practice', 'Version': version, 'Main-Class': 'com.practice.example.demo.MyApp'
+    }
     archiveName 'Practice.jar'
+    dependsOn configurations.runtime
+    from {
+        configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
+    }
 }
