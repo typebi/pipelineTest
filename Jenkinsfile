@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo test'
-                slackSend (channel: '#testchannel', color: '#008000', message: "RUN TEST")
+                slackSend (channel: '#testchannel', color: '#008000', message: "RUN TEST 1")
             }
         }
         stage('Deploy') {
