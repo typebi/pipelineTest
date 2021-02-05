@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'java -jar --server.port=8180 /var/jnkeins_home/build/libs/Practice.jar'
+                sh 'java -jar --server.port=8180 var/jnkeins_home/build/libs/Practice.jar'
                 slackSend (channel: '#testchannel', color: '#008000', message: "DEPLOY SUCCESS")
             }
         }
