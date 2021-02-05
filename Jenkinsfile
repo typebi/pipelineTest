@@ -8,11 +8,7 @@ pipeline {
         stage('Git Progress') {
             steps {
                 git branch: 'main', url: 'https://github.com/typebi/pipelineTest/'
-            }
-        }
-        stage('Test Slack') {
-            steps {
-                slackSend (channel: '#testchannel', color: '#008000', message: "GIT CONNECT")
+		slackSend (channel: '#testchannel', color: '#008000', message: "GIT CONNECT")
             }
         }
         stage('Build') {
