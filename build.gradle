@@ -21,3 +21,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+jar{
+    manifest{
+        attributes  'Title': 'My Application', 'Version': version, 'Main-Class': mainClassName
+    }
+    archiveName 'Practice.jar'
+}

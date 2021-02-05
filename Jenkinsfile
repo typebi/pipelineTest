@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo deploy'
+                sh 'java -jar --server.port=8180 build/libs/Practice.jar'
                 slackSend (channel: '#testchannel', color: '#008000', message: "DEPLOY SUCCESS")
             }
         }
