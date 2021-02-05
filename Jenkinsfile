@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'java -jar --server.port=8180 nohup java -jar build/libs/demo-0.0.1-SNAPSHOT.jar'
+                sh 'java -jar --server.port=8180 java -jar build/libs/demo-0.0.1-SNAPSHOT.jar'
                 slackSend (channel: '#testchannel', color: '#008000', message: "DEPLOY SUCCESS")
             }
         }
